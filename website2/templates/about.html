@@ -4,8 +4,10 @@
 {% load humanize %}
 
 
-    {% block main %}
-        <h1>ABOUT　US</h1>
-         <p>{％　now 'Y年m月d日' ％}までに、{{ num_services| intcomma }}のサービスを作りました。　</p>
-    {% endblock %}
+{% block main %}
+<h1>ABOUT　US</h1>
+<p>{％　now 'Y年m月d日 H時i分' ％}現在までに、{{ num_services| intcomma }}のサービスを作りました。</p>
+<h2>スキル</h2>
+
+{% endblock %}
     
