@@ -3,11 +3,22 @@
 <!doctype HTML>
 {% load humanize %}
 
-
 {% block main %}
-<h1>ABOUT　US</h1>
-<p>{％　now 'Y年m月d日 H時i分' ％}現在までに、{{ num_services| intcomma }}のサービスを作りました。</p>
+<h1>ABOUT US</h1>
+<p>これまで{{ num_services | intcomma }}個のサービスをつくりました
+
+<p>{% now "Y年m月d日　H時i分　" %}現在までに{{ num_services | intcomma }}個のサービスをつくりました</p>
+<h2>実績</h2>
 <h2>スキル</h2>
 
+<ul>
+    {% for skill in skills %}
+    <li>{{skill}}</li>
+    {% empty %}
+    スキルがありません
+    {% endfor %}
+    
+</ul>
+<img src = "{% static 'jiangshi.jpg' %}" />
 {% endblock %}
     
