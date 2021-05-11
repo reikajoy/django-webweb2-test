@@ -6,7 +6,7 @@
 
     {% block main %}
         <h1>HOME</h1>
-        
+        <h1>現在時刻は{% now 'Y年m月d日　%}です。</h1>
         {% if username == "J Rika" %}
         <p>自分です。</P>
         {% elif username %}
