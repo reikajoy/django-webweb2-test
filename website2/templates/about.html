@@ -7,7 +7,7 @@
 <h1>ABOUT US</h1>
 <p>これまで{{ num_services | intcomma }}個のサービスをつくりました
 
-<p>{% now "Y年m月d日　H時i分　" %}現在までに{{ num_services | intcomma }}個のサービスをつくりました</p>
+<p>{% now "Y年m月d日H時i分" %}現在までに{{ num_services | intcomma }}個のサービスをつくりました</p>
 <h2>実績</h2>
 <h2>スキル</h2>
 
@@ -19,6 +19,6 @@
     {% endfor %}
     
 </ul>
-<img src = "{% static 'jiangshi.jpg' %}" />
+<!-- <img src = "{% static 'jiangshi.jpg' %}" /> -->
 {% endblock %}
     
