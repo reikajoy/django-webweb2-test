@@ -1,0 +1,21 @@
+{% load static %}
+<!doctype HTML>
+{% load humanize %}
+
+<html>
+    <head>
+        <link rel="stylesheet href= "{% static 'main.css' %}" >
+   
+    </head>
+    
+    <body>
+    {% include '_navbar.html' %}
+
+        
+    {% block main %}
+        <h1>HOME</h1>
+    {% endblock %}
+    
+    {% include '_footer.html' %}
+    
+    </body>
